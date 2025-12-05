@@ -1,0 +1,137 @@
+{
+  "lang.fr": "Français",
+  "lang.en": "English",
+  "lang.nl": "Nederlands",
+
+  "nav.home": "Accueil",
+  "nav.services": "Services",
+  "nav.about": "À propos",
+  "nav.reviews": "Avis",
+  "nav.contact": "Contact",
+  "nav.reserve": "Réserver",
+
+  "hero.title": "Garage Auto TuneUp",
+  "hero.tagline": "Performance & précision à Kraainem",
+  "hero.subtitle": "Entretien, diagnostic et réparations rapides avec expertise.",
+  "hero.btn_book": "Réserver un service",
+  "hero.btn_services": "Nos Services",
+  "hero.aria": "Garage Auto TuneUp à Kraainem",
+  "hero.img_alt": "Voiture devant Garage Auto TuneUp à Kraainem – Entretien et réparation automobile",
+
+
+  
+  "services.title": "Nos Services",
+  "services.diagnostic": "Diagnostic complet",
+  "services.oil": "Vidange d’huile",
+  "services.filters": "Remplacement de filtres",
+  "services.brake": "Freins & Disques",
+  "services.checkup": "Contrôle général",
+  "services.chain": "Chaîne de distribution",
+  "services.img_alt": "Service automobile : {{title}}",
+
+
+
+  "about.title": "À propos de Garage Auto TuneUp",
+  "about.text": "Atelier indépendant situé à Kraainem, spécialisé dans le diagnostic électronique, l’entretien et les réparations rapides.",
+  "about.why": "Pourquoi nous choisir ?",
+  "about.b1": "Devis clair & prix honnêtes",
+  "about.b2": "Réservation en ligne réelle",
+  "about.b3": "Garantie sur pièces & main-d’œuvre",
+  "about.btn_book": "Réserver maintenant",
+  "about.btn_services": "Voir les services",
+  "about.badge": "Performance & Précision",
+  "about.img_alt": "Garage Auto TuneUp – Atelier automobile à Kraainem",
+
+
+
+  "reviews_title": "Avis des clients",
+
+  
+  "contact.title": "Contact & Adresse",
+  "contact.subtitle": "Une question, un devis ou un rendez-vous ? Envoyez-nous un message.",
+  "contact.garage_title": "Garage Auto TuneUp",
+  "contact.address": "Tramlaan 7, 1950 Kraainem",
+  "contact.whatsapp": "WhatsApp Direct",
+  "contact.hours": "Lun–Jeu : 08:00–19:00\nVen : 09:00–19:00\nSam : 09:00–12:00\nDim : Fermé",
+  "contact.parking": "Parking facile devant le garage.",
+  
+  "contact.form_title": "Envoyer un message",
+  "contact.form_name": "Nom & prénom",
+  "contact.placeholder_name": "Votre nom",
+  "contact.form_email": "Email",
+  "contact.placeholder_email": "email@example.com",
+  "contact.form_phone": "Téléphone",
+  "contact.placeholder_phone": "Votre numéro",
+  "contact.form_message": "Message",
+  "contact.placeholder_msg": "Décrivez votre demande",
+  "contact.form_send": "Envoyer",
+  "contact.form_success": "Message envoyé. Nous vous recontactons bientôt.",
+
+  "contact.error_required": "Veuillez remplir tous les champs obligatoires.",
+  "contact.error_server": "Erreur serveur.",
+
+
+
+ 
+  "footer.tagline": "Performance & Précision • Kraainem",
+  "footer.contact_title": "Contact",
+  "footer.hours_title": "Horaires",
+  "footer.follow": "Suivez-nous",
+  "footer.rights": "Auto TuneUp Kraainem – Entretien & Réparation complète",
+
+
+
+ 
+  "reserve_title": "Réserver un service",
+  "reserve_subtitle": "Choisissez une date disponible, une heure et un service.",
+
+  "reserve_select_hour": "Heure souhaitée",
+  "reserve_select_date": "Sélectionnez une date.",
+  "reserve_future_limit": "Les réservations pour cette période ne sont pas ouvertes.",
+
+  "reserve_service_type": "Type de service",
+  "reserve_fullname": "Nom & prénom",
+  "reserve_phone": "Téléphone",
+  "reserve_plate": "Plaque d’immatriculation",
+  "reserve_message": "Message",
+
+  "reserve_confirm": "Confirmer la réservation",
+  "reserve_sending": "Envoi...",
+  "reserve_back": "Retour",
+
+  "reserve_error_missing": "Veuillez choisir une date, une heure et un service.",
+  "reserve_error_required_fields": "Veuillez remplir tous les champs obligatoires.",
+  "reserve_error_future_limit": "Les réservations pour cette période ne sont pas encore ouvertes.",
+  "reserve_error_server": "Une erreur est survenue.",
+  "reserve_success": "Votre réservation a été enregistrée !",
+
+  "month_jan": "janvier",
+  "month_feb": "février",
+  "month_mar": "mars",
+  "month_apr": "avril",
+  "month_may": "mai",
+  "month_jun": "juin",
+  "month_jul": "juillet",
+  "month_aug": "août",
+  "month_sep": "septembre",
+  "month_oct": "octobre",
+  "month_nov": "novembre",
+  "month_dec": "décembre",
+
+  "weekday_mon": "Lun",
+  "weekday_tue": "Mar",
+  "weekday_wed": "Mer",
+  "weekday_thu": "Jeu",
+  "weekday_fri": "Ven",
+  "weekday_sat": "Sam",
+  "weekday_sun": "Dim",
+
+  "srv_maintenance": "Entretien",
+  "srv_oil": "Vidange d’huile",
+  "srv_diag": "Diagnostic",
+  "srv_repair": "Réparation",
+  "srv_chain": "Chaîne de distribution",
+  "srv_ac": "Climatisation",
+  "srv_brake": "Freins"
+
+}

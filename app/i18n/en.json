@@ -1,0 +1,135 @@
+{
+  "lang.fr": "Français",
+  "lang.en": "English",
+  "lang.nl": "Nederlands",
+
+  "nav.home": "Home",
+  "nav.services": "Services",
+  "nav.about": "About",
+  "nav.reviews": "Reviews",
+  "nav.contact": "Contact",
+  "nav.reserve": "Book",
+
+  "hero.title": "Garage Auto TuneUp",
+  "hero.tagline": "Performance & precision in Kraainem",
+  "hero.subtitle": "Maintenance, diagnostics and quick repairs with expertise.",
+  "hero.btn_book": "Book a service",
+  "hero.btn_services": "Our Services",
+  "hero.aria": "Garage Auto TuneUp in Kraainem",
+  "hero.img_alt": "Car in front of Garage Auto Tune-Up in Kraainem – car maintenance and repair",
+
+
+  "services.title": "Our Services",
+  "services.diagnostic": "Full diagnostic",
+  "services.oil": "Oil change",
+  "services.filters": "Filter replacement",
+  "services.brake": "Brakes & Discs",
+  "services.checkup": "Full check-up",
+  "services.chain": "Timing chain",
+  "services.img_alt": "Car service: {{title}}",
+
+
+  "about.title": "About Garage Auto TuneUp",
+  "about.text": "Independent workshop in Kraainem, specialized in electronic diagnostics, maintenance and fast repairs.",
+  "about.why": "Why choose us?",
+  "about.b1": "Clear quotes & honest prices",
+  "about.b2": "Real online booking",
+  "about.b3": "Warranty on parts & labor",
+  "about.btn_book": "Book now",
+  "about.btn_services": "View services",
+  "about.badge": "Performance & Precision",
+  "about.img_alt": "Garage Auto TuneUp – Car workshop in Kraainem",
+
+
+
+ "reviews_title": "Customer Reviews",
+
+  
+  "contact.title": "Contact & Address",
+  "contact.subtitle": "A question, quote request or appointment? Send us a message.",
+  "contact.garage_title": "Garage Auto TuneUp",
+  "contact.address": "Tramlaan 7, 1950 Kraainem",
+  "contact.whatsapp": "WhatsApp Direct",
+  "contact.hours": "Mon–Thu: 08:00–19:00\nFri: 09:00–19:00\nSat: 09:00–12:00\nSun: Closed",
+  "contact.parking": "Easy parking in front of the garage.",
+
+  "contact.form_title": "Send a message",
+  "contact.form_name": "Full name",
+  "contact.placeholder_name": "Your name",
+  "contact.form_email": "Email",
+  "contact.placeholder_email": "email@example.com",
+  "contact.form_phone": "Phone",
+  "contact.placeholder_phone": "Your number",
+  "contact.form_message": "Message",
+  "contact.placeholder_msg": "Describe your request",
+  "contact.form_send": "Send",
+  "contact.form_success": "Message sent. We will contact you soon.",
+
+  "contact.error_required": "Please fill in all required fields.",
+  "contact.error_server": "Server error.",
+
+
+
+ 
+  "footer.tagline": "Performance & Precision • Kraainem",
+  "footer.contact_title": "Contact",
+  "footer.hours_title": "Opening hours",
+  "footer.follow": "Follow us",
+  "footer.rights": "Auto TuneUp Kraainem – Full Maintenance & Repair",
+
+
+
+  "reserve_title": "Book a service",
+  "reserve_subtitle": "Choose an available date, time, and service.",
+
+  "reserve_select_hour": "Preferred time",
+  "reserve_select_date": "Select a date.",
+  "reserve_future_limit": "Bookings for this period are not yet open.",
+
+  "reserve_service_type": "Service type",
+  "reserve_fullname": "Full name",
+  "reserve_phone": "Phone",
+  "reserve_plate": "License plate",
+  "reserve_message": "Message",
+
+  "reserve_confirm": "Confirm booking",
+  "reserve_sending": "Sending...",
+  "reserve_back": "Back",
+
+  "reserve_error_missing": "Please choose a date, time, and service.",
+  "reserve_error_required_fields": "Please fill in all required fields.",
+  "reserve_error_future_limit": "Bookings for this period are not yet open.",
+  "reserve_error_server": "An error occurred.",
+  "reserve_success": "Your booking has been saved!",
+
+  "month_jan": "January",
+  "month_feb": "February",
+  "month_mar": "March",
+  "month_apr": "April",
+  "month_may": "May",
+  "month_jun": "June",
+  "month_jul": "July",
+  "month_aug": "August",
+  "month_sep": "September",
+  "month_oct": "October",
+  "month_nov": "November",
+  "month_dec": "December",
+
+  "weekday_mon": "Mon",
+  "weekday_tue": "Tue",
+  "weekday_wed": "Wed",
+  "weekday_thu": "Thu",
+  "weekday_fri": "Fri",
+  "weekday_sat": "Sat",
+  "weekday_sun": "Sun",
+
+  "srv_maintenance": "Maintenance",
+  "srv_oil": "Oil change",
+  "srv_diag": "Diagnostic",
+  "srv_repair": "Repair",
+  "srv_chain": "Timing chain",
+  "srv_ac": "Air conditioning",
+  "srv_brake": "Brakes"
+}
+
+

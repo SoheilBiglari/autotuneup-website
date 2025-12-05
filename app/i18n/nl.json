@@ -1,0 +1,136 @@
+{
+  "lang.fr": "Frans",
+  "lang.en": "Engels",
+  "lang.nl": "Nederlands",
+
+  "nav.home": "Home",
+  "nav.services": "Diensten",
+  "nav.about": "Over ons",
+  "nav.reviews": "Beoordelingen",
+  "nav.contact": "Contact",
+  "nav.reserve": "Boeken",
+
+  "hero.title": "Garage Auto TuneUp",
+  "hero.tagline": "Prestatie & precisie in Kraainem",
+  "hero.subtitle": "Onderhoud, diagnose en snelle herstellingen met expertise.",
+  "hero.btn_book": "Een service boeken",
+  "hero.btn_services": "Onze diensten",
+  "hero.aria": "Garage Auto TuneUp in Kraainem",
+  "hero.img_alt": "Auto voor Garage Auto Tune-Up in Kraainem – onderhoud en herstellingen",
+
+
+  
+  "services.title": "Onze Diensten",
+  "services.diagnostic": "Volledige diagnose",
+  "services.oil": "Olie verversen",
+  "services.filters": "Filter vervanging",
+  "services.brake": "Remmen & Schijven",
+  "services.checkup": "Algemene controle",
+  "services.chain": "Distributieketting",
+  "services.img_alt": "Autoservice: {{title}}",
+
+
+
+
+  "about.title": "Over Garage Auto TuneUp",
+  "about.text": "Onafhankelijke garage in Kraainem, gespecialiseerd in elektronische diagnose, onderhoud en snelle herstellingen.",
+  "about.why": "Waarom voor ons kiezen?",
+  "about.b1": "Duidelijke offertes & eerlijke prijzen",
+  "about.b2": "Echte online reservering",
+  "about.b3": "Garantie op onderdelen & arbeid",
+  "about.btn_book": "Nu reserveren",
+  "about.btn_services": "Bekijk diensten",
+  "about.badge": "Prestatie & Precisie",
+  "about.img_alt": "Garage Auto TuneUp – Autowerkplaats in Kraainem",
+
+
+
+  "reviews_title": "Klantenbeoordelingen",
+
+  
+  "contact.title": "Contact & Adres",
+  "contact.subtitle": "Een vraag, offerte of afspraak? Stuur ons een bericht.",
+  "contact.garage_title": "Garage Auto TuneUp",
+  "contact.address": "Tramlaan 7, 1950 Kraainem",
+  "contact.whatsapp": "WhatsApp Direct",
+  "contact.hours": "Ma–Do: 08:00–19:00\nVr: 09:00–19:00\nZa: 09:00–12:00\nZo: Gesloten",
+  "contact.parking": "Gemakkelijke parking voor de garage.",
+
+  "contact.form_title": "Bericht verzenden",
+  "contact.form_name": "Naam & voornaam",
+  "contact.placeholder_name": "Uw naam",
+  "contact.form_email": "Email",
+  "contact.placeholder_email": "email@example.com",
+  "contact.form_phone": "Telefoon",
+  "contact.placeholder_phone": "Uw nummer",
+  "contact.form_message": "Bericht",
+  "contact.placeholder_msg": "Beschrijf uw aanvraag",
+  "contact.form_send": "Verzenden",
+  "contact.form_success": "Bericht verzonden. Wij nemen spoedig contact op.",
+
+  "contact.error_required": "Vul alle verplichte velden in.",
+  "contact.error_server": "Serverfout.",
+
+
+
+  "footer.tagline": "Performance & Precisie • Kraainem",
+  "footer.contact_title": "Contact",
+  "footer.hours_title": "Openingsuren",
+  "footer.follow": "Volg ons",
+  "footer.rights": "Auto TuneUp Kraainem – Onderhoud & Herstelling",
+
+
+
+  "reserve_title": "Een service reserveren",
+  "reserve_subtitle": "Kies een beschikbare datum, tijd en service.",
+
+  "reserve_select_hour": "Gewenst uur",
+  "reserve_select_date": "Selecteer een datum.",
+  "reserve_future_limit": "Reservaties voor deze periode zijn nog niet geopend.",
+
+  "reserve_service_type": "Type service",
+  "reserve_fullname": "Naam & voornaam",
+  "reserve_phone": "Telefoon",
+  "reserve_plate": "Nummerplaat",
+  "reserve_message": "Bericht",
+
+  "reserve_confirm": "Reservering bevestigen",
+  "reserve_sending": "Verzenden...",
+  "reserve_back": "Terug",
+
+  "reserve_error_missing": "Gelieve een datum, uur en service te kiezen.",
+  "reserve_error_required_fields": "Gelieve alle verplichte velden in te vullen.",
+  "reserve_error_future_limit": "Reservaties voor deze periode zijn nog niet geopend.",
+  "reserve_error_server": "Er is een fout opgetreden.",
+  "reserve_success": "Uw reservering is opgeslagen!",
+
+  "month_jan": "januari",
+  "month_feb": "februari",
+  "month_mar": "maart",
+  "month_apr": "april",
+  "month_may": "mei",
+  "month_jun": "juni",
+  "month_jul": "juli",
+  "month_aug": "augustus",
+  "month_sep": "september",
+  "month_oct": "oktober",
+  "month_nov": "november",
+  "month_dec": "december",
+
+  "weekday_mon": "Ma",
+  "weekday_tue": "Di",
+  "weekday_wed": "Wo",
+  "weekday_thu": "Do",
+  "weekday_fri": "Vr",
+  "weekday_sat": "Za",
+  "weekday_sun": "Zo",
+
+  "srv_maintenance": "Onderhoud",
+  "srv_oil": "Olie verversen",
+  "srv_diag": "Diagnose",
+  "srv_repair": "Herstelling",
+  "srv_chain": "Distributieketting",
+  "srv_ac": "Airconditioning",
+  "srv_brake": "Remmen"
+}
+
