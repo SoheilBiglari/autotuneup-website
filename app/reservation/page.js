@@ -1,9 +1,9 @@
-// app/reservation/page.js
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useT } from "@/app/TranslationProvider";
+import { useSearchParams, useRouter } from "next/navigation";
 
 /* JSON-LD ثابت برای صفحه رزرو */
 const reservationJsonLd = {
@@ -38,6 +38,18 @@ async function sendReservation(data) {
 
 export default function ReservationPage() {
   const { t } = useT();
+  const router = useRouter();
+  const params = useSearchParams();
+
+  /* ---------------------------------------
+     1) اگر ?lang نبود → ریدایرکت اتومات
+  ---------------------------------------- */
+  useEffect(() => {
+    const lang = params.get("lang");
+    if (!lang) {
+      router.replace("/reservation?lang=fr");
+    }
+  }, [params, router]);
 
   /* STATES */
   const today = new Date();
@@ -49,7 +61,7 @@ export default function ReservationPage() {
   const [selectedService, setSelectedService] = useState(null);
 
   const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState(""); // ✅ بدون ایمیل تست
+  const [email, setEmail] = useState(""); 
   const [phone, setPhone] = useState("");
   const [licensePlate, setLicensePlate] = useState("");
   const [message, setMessage] = useState("");
@@ -93,28 +105,15 @@ export default function ReservationPage() {
 
   /* LOCAL HELPERS */
   const monthNames = [
-    t("month_jan"),
-    t("month_feb"),
-    t("month_mar"),
-    t("month_apr"),
-    t("month_may"),
-    t("month_jun"),
-    t("month_jul"),
-    t("month_aug"),
-    t("month_sep"),
-    t("month_oct"),
-    t("month_nov"),
-    t("month_dec"),
+    t("month_jan"), t("month_feb"), t("month_mar"),
+    t("month_apr"), t("month_may"), t("month_jun"),
+    t("month_jul"), t("month_aug"), t("month_sep"),
+    t("month_oct"), t("month_nov"), t("month_dec"),
   ];
 
   const weekdayLabels = [
-    t("weekday_mon"),
-    t("weekday_tue"),
-    t("weekday_wed"),
-    t("weekday_thu"),
-    t("weekday_fri"),
-    t("weekday_sat"),
-    t("weekday_sun"),
+    t("weekday_mon"), t("weekday_tue"), t("weekday_wed"),
+    t("weekday_thu"), t("weekday_fri"), t("weekday_sat"), t("weekday_sun"),
   ];
 
   const openingHoursConfig = {
@@ -128,17 +127,13 @@ export default function ReservationPage() {
   };
 
   function formatDateKey(year, month, day) {
-    return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(
-      2,
-      "0"
-    )}`;
+    return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
   }
 
   function generateHours(start, end) {
     let [h] = start.split(":").map(Number);
     const [endH] = end.split(":").map(Number);
     const list = [];
-
     while (h <= endH) {
       list.push(`${String(h).padStart(2, "0")}:00`);
       h++;
@@ -147,17 +142,13 @@ export default function ReservationPage() {
   }
 
   function isPast(day) {
-    return (
-      new Date(currentYear, currentMonth, day) <
-      new Date(today.getFullYear(), today.getMonth(), today.getDate())
-    );
+    return new Date(currentYear, currentMonth, day) <
+           new Date(today.getFullYear(), today.getMonth(), today.getDate());
   }
 
   function isAfterLimit(day) {
-    return (
-      new Date(currentYear, currentMonth, day) >
-      new Date(MAX_BOOKING_YEAR, MAX_BOOKING_MONTH, MAX_BOOKING_DAY)
-    );
+    return new Date(currentYear, currentMonth, day) >
+           new Date(MAX_BOOKING_YEAR, MAX_BOOKING_MONTH, MAX_BOOKING_DAY);
   }
 
   function getDayStatus(day) {
@@ -175,7 +166,6 @@ export default function ReservationPage() {
     return reserved.length >= total.length ? "full" : "available";
   }
 
-  /* Days of month */
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
@@ -197,16 +187,12 @@ export default function ReservationPage() {
       ? generateHours(todayHours[0], todayHours[1])
       : [];
 
-  /* Change month */
   function nextMonth() {
     setSelectedDate(null);
     setSelectedHour(null);
     let m = currentMonth + 1;
     let y = currentYear;
-    if (m > 11) {
-      m = 0;
-      y++;
-    }
+    if (m > 11) { m = 0; y++; }
     setCurrentMonth(m);
     setCurrentYear(y);
   }
@@ -216,10 +202,7 @@ export default function ReservationPage() {
     setSelectedHour(null);
     let m = currentMonth - 1;
     let y = currentYear;
-    if (m < 0) {
-      m = 11;
-      y--;
-    }
+    if (m < 0) { m = 11; y--; }
     setCurrentMonth(m);
     setCurrentYear(y);
   }
@@ -229,17 +212,14 @@ export default function ReservationPage() {
     setErrorMsg("");
     setSuccessMsg("");
 
-    if (!selectedDate || !selectedHour || !selectedService) {
+    if (!selectedDate || !selectedHour || !selectedService)
       return setErrorMsg(t("reserve_error_missing"));
-    }
 
-    if (!fullName || !email || !phone) {
+    if (!fullName || !email || !phone)
       return setErrorMsg(t("reserve_error_required_fields"));
-    }
 
-    if (isAfterLimit(selectedDate)) {
+    if (isAfterLimit(selectedDate))
       return setErrorMsg(t("reserve_error_future_limit"));
-    }
 
     setLoading(true);
     try {
@@ -268,7 +248,6 @@ export default function ReservationPage() {
     }
   }
 
-  /* Services */
   const servicesList = [
     t("srv_maintenance"),
     t("srv_oil"),
@@ -285,20 +264,17 @@ export default function ReservationPage() {
       <p className="reservation-subtitle">{t("reserve_subtitle")}</p>
 
       <div className="reservation-layout">
+        
         {/* CALENDAR */}
         <div className="reservation-card calendar-card">
           <div className="calendar-header">
             <button onClick={prevMonth}>{"<"}</button>
-            <h3>
-              {monthNames[currentMonth]} {currentYear}
-            </h3>
+            <h3>{monthNames[currentMonth]} {currentYear}</h3>
             <button onClick={nextMonth}>{">"}</button>
           </div>
 
           <div className="calendar-weekdays">
-            {weekdayLabels.map((d) => (
-              <span key={d}>{d}</span>
-            ))}
+            {weekdayLabels.map((d) => <span key={d}>{d}</span>)}
           </div>
 
           <div className="calendar-grid">
@@ -318,9 +294,7 @@ export default function ReservationPage() {
               return (
                 <div
                   key={day}
-                  className={`${cls} ${
-                    selectedDate === day ? "selected" : ""
-                  }`}
+                  className={`${cls} ${selectedDate === day ? "selected" : ""}`}
                   onClick={() => {
                     if (!cls.includes("available")) return;
                     setSelectedDate(day);
@@ -336,9 +310,7 @@ export default function ReservationPage() {
           <h4 className="hours-title">{t("reserve_select_hour")}</h4>
 
           {!selectedDate && <p>{t("reserve_select_date")}</p>}
-          {selectedDate && isAfterLimit(selectedDate) && (
-            <p>{t("reserve_future_limit")}</p>
-          )}
+          {selectedDate && isAfterLimit(selectedDate) && <p>{t("reserve_future_limit")}</p>}
 
           {selectedDate && todayHours && !isAfterLimit(selectedDate) && (
             <div className="hours-grid">
@@ -385,11 +357,9 @@ export default function ReservationPage() {
           </div>
 
           <div className="reservation-form-grid">
-            {/* FULL NAME */}
+            
             <label className="form-label">
-              <span className="form-label-title">
-                {t("reserve_fullname")}
-              </span>
+              <span className="form-label-title">{t("reserve_fullname")}</span>
               <input
                 className="glass-input"
                 value={fullName}
@@ -397,7 +367,6 @@ export default function ReservationPage() {
               />
             </label>
 
-            {/* EMAIL */}
             <label className="form-label">
               <span className="form-label-title">Email</span>
               <input
@@ -410,7 +379,6 @@ export default function ReservationPage() {
               />
             </label>
 
-            {/* PHONE */}
             <label className="form-label">
               <span className="form-label-title">{t("reserve_phone")}</span>
               <input
@@ -420,19 +388,16 @@ export default function ReservationPage() {
               />
             </label>
 
-            {/* PLATE */}
             <label className="form-label">
-  <span className="form-label-title">{t("reserve_plate")}</span>
-  <input
-    className="glass-input"
-    value={licensePlate}
-    onChange={(e) => setLicensePlate(e.target.value)}
-    placeholder="ex: 1-ABC-123 ou 1ABC123"
-  />
-</label>
+              <span className="form-label-title">{t("reserve_plate")}</span>
+              <input
+                className="glass-input"
+                value={licensePlate}
+                onChange={(e) => setLicensePlate(e.target.value)}
+                placeholder="ex: 1-ABC-123 ou 1ABC123"
+              />
+            </label>
 
-
-            {/* MESSAGE */}
             <label className="form-label full-row">
               <span className="form-label-title">{t("reserve_message")}</span>
               <textarea
@@ -446,17 +411,16 @@ export default function ReservationPage() {
               {loading ? t("reserve_sending") : t("reserve_confirm")}
             </button>
 
-            {errorMsg && (
-              <p style={{ color: "red", marginTop: 6 }}>{errorMsg}</p>
-            )}
-            {successMsg && (
-              <p style={{ color: "lime", marginTop: 6 }}>{successMsg}</p>
-            )}
+            {errorMsg && <p style={{ color: "red", marginTop: 6 }}>{errorMsg}</p>}
+            {successMsg && <p style={{ color: "lime", marginTop: 6 }}>{successMsg}</p>}
           </div>
         </div>
       </div>
 
-      <Link href="/" className="back-home-btn">
+      <Link
+        href={`/?lang=${params.get("lang") || "fr"}`}
+        className="back-home-btn"
+      >
         <i className="fa-solid fa-wrench"></i> {t("reserve_back")}
       </Link>
     </div>

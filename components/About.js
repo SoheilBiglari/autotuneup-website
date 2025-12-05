@@ -46,7 +46,7 @@ export default function About() {
           </ul>
 
           <div className="about__cta">
-            <a href="/reservation" className="btn btn--primary">
+            <a href="/reservation?lang=${lang}" className="btn btn--primary">
               {t("about.btn_book")}
             </a>
 

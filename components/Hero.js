@@ -40,7 +40,7 @@ export default function Hero() {
           </p>
 
           <div className="hero__cta">
-            <a className="btn btn--primary" href="/reservation">
+            <a className="btn btn--primary" href={`/reservation?lang=${lang}`}>
               {t("hero.btn_book")}
             </a>
             <a className="btn btn--outline" href="#services">
